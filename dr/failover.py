@@ -90,6 +90,7 @@ def failover(target: str, backend: str, wait: float) -> dict:
     # 3 — bật GPU pool: warm -> full. serving/app.py bắt đầu đếm WARMUP_SECONDS từ lúc này.
     pool = pathlib.Path(f"state/region-{target}/pool_state")
     prev_pool = pool.read_text().strip() if pool.exists() else "cold"
+    pool.parent.mkdir(parents=True, exist_ok=True)
     pool.write_text("full")
     done("3_scale_pool", ok=True, pool_state_from=prev_pool, pool_state_to="full")
 
