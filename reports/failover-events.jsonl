@@ -1,0 +1,13 @@
+{"ts": 1791626233.305275, "iso": "2026-10-10T09:57:13", "step": "1_verify_target", "target": "b", "ok": true, "state": {"region": "b", "pool_state": "warm"}}
+{"ts": 1791626233.3247857, "iso": "2026-10-10T09:57:13", "step": "2_restore_snapshot", "target": "b", "ok": true, "rpo_seconds": null, "docs_lost": null, "embed_model_version": "test", "snapshot_at": 1791626233.3081214, "snapshot_latest_doc_ts": 1791626233.3081217, "primary_latest_doc_ts": 1791625783.6078343}
+{"ts": 1791626233.3342202, "iso": "2026-10-10T09:57:13", "step": "3_scale_pool", "target": "b", "ok": true, "pool_state_from": "warm", "pool_state_to": "full"}
+{"ts": 1791626234.340043, "iso": "2026-10-10T09:57:14", "step": "4_wait_ready", "target": "b", "ok": false, "waited_s": 1.0, "wait_limit_s": 1.0, "last_reason": "ConnectError", "note": "ABORT: khong cutover"}
+{"ts": 1791626302.585537, "iso": "2026-10-10T09:58:22", "step": "1_verify_target", "target": "b", "ok": true, "state": {"region": "b", "pool_state": "warm", "weights": false, "count": 0, "latest_doc_ts": null, "ts": 1791626302.5837235}}
+{"ts": 1791626302.6787443, "iso": "2026-10-10T09:58:22", "step": "2_restore_snapshot", "target": "b", "ok": true, "rpo_seconds": 28.04, "docs_lost": 14, "embed_model_version": "embed-model=vi-e5-base@v3", "snapshot_at": 1791626273.0325596, "snapshot_latest_doc_ts": 1791626273.0137956, "primary_latest_doc_ts": 1791626301.0514412}
+{"ts": 1791626302.6856463, "iso": "2026-10-10T09:58:22", "step": "3_scale_pool", "target": "b", "ok": true, "pool_state_from": "warm", "pool_state_to": "full"}
+{"ts": 1791626308.8068795, "iso": "2026-10-10T09:58:28", "step": "4_wait_ready", "target": "b", "ok": true, "waited_s": 6.12, "last_not_ready_reason": "warming_up_0.5s_left"}
+{"ts": 1791626308.8147564, "iso": "2026-10-10T09:58:28", "step": "5_dns_cutover", "target": "b", "ok": true, "active_region_from": "a", "active_region_to": "b"}
+{"ts": 1791626712.5106676, "iso": "2026-10-10T10:05:12", "step": "1_verify_target", "target": "b", "ok": true, "state": {"region": "b", "pool_state": "warm"}}
+{"ts": 1791626712.5503051, "iso": "2026-10-10T10:05:12", "step": "2_restore_snapshot", "target": "b", "ok": true, "rpo_seconds": 148.23, "docs_lost": 74, "embed_model_version": "test", "snapshot_at": 1791626712.5156975, "snapshot_latest_doc_ts": 1791626712.5156977, "primary_latest_doc_ts": 1791626421.2475836}
+{"ts": 1791626712.5605834, "iso": "2026-10-10T10:05:12", "step": "3_scale_pool", "target": "b", "ok": true, "pool_state_from": "full", "pool_state_to": "full"}
+{"ts": 1791626713.568405, "iso": "2026-10-10T10:05:13", "step": "4_wait_ready", "target": "b", "ok": false, "waited_s": 1.0, "wait_limit_s": 1.0, "last_reason": "ConnectError", "note": "ABORT: khong cutover"}
